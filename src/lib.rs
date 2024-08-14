@@ -72,3 +72,10 @@ impl<T: FromStr> ParsedTextFieldState<T> {
         self
     }
 }
+
+impl<T: FromStr + ToString> ParsedTextFieldState<T> {
+    pub fn set_value(&mut self, value: T) {
+        self.text = value.to_string();
+        self.parsed = Some(value);
+    }
+}
