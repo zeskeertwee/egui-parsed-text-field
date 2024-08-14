@@ -62,12 +62,12 @@ impl<T: FromStr + Default + ToString> Default for ParsedTextFieldState<T> {
 }
 
 impl<T: FromStr> ParsedTextFieldState<T> {
-    pub fn desired_width(mut self, desired_width: f32) -> self {
+    pub fn desired_width(mut self, desired_width: f32) -> Self {
         self.desired_width = desired_width;
         self
     }
 
-    pub fn hint_text(mut self, hint_text: String) -> self {
+    pub fn hint_text(mut self, hint_text: String) -> Self {
         self.hint_text = hint_text;
         self
     }
